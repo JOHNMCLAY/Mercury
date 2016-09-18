@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/relativeLayout1"
+        android:background="@android:color/background_light">
+        <ImageView
+            android:src="@drawable/mercury_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MERCURY"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/relativeLayout2"
+        android:background="@android:color/background_light">
+        <Mvx.MvxListView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="350dp"
+            android:layout_height="3000dp"
+            android:id="@+id/Location_LIST"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            local:MvxItemTemplate="@layout/list_locations"
+            local:MvxBind="ItemsSource OfficeLocations; ItemClick SelectLocationCommand" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="40.0dp"
+        android:id="@+id/relativeLayout3"
+        android:background="@drawable/im_03_underline" />
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout4"
+        android:background="@android:color/background_light">
+        <RelativeLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="325dp"
+            android:layout_height="20dp"
+            android:id="@+id/Select_Profile"
+            android:background="@drawable/selectlocation"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>
