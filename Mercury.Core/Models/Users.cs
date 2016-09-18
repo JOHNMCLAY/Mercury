@@ -41,8 +41,31 @@ namespace Mercury.Core.Models
             }
         }
         //[For Other Users]
-        public Users(string _fullName, string _pin, string _status, string _loc, string _msg)
+        public Users(string _fullName, string _pin)
         {
+            Random r = new Random();
+
+            Fullname = _fullName;
+            PIN = _pin;
+            Username = _fullName.Replace(" ", ".");
+            Location = Database._locations[r.Next(0, Database._locations.Count)].LocationName;
+
+            if(r.Next(1,5)==1) { Status = "STATUS: Unavailable"; }
+            else { Status = "STATUS: Available"; }
+
+            if(Status == "STATUS: Unavailable")
+            {
+                if (r.Next(1, 4) == 1) { Message = "Out to Lunch"; }
+                if (r.Next(1, 4) == 2) { Message = "BRB"; }
+                if (r.Next(1, 4) == 3) { Message = "Working from Home"; }
+            }
+
+            if (Status == "STATUS: Available")
+            {
+                if (r.Next(1, 4) == 1) { Message = "N/A"; }
+                if (r.Next(1, 4) == 2) { Message = "Free until 5pm"; }
+                if (r.Next(1, 4) == 3) { Message = "N/A"; }
+            }
 
         }
     }

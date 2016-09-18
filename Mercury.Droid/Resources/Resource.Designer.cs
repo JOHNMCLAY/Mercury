@@ -234,6 +234,9 @@ namespace Mercury.Droid
 			// aapt resource value: 0x7f04002d
 			public const int Buttons_Layout = 2130968621;
 			
+			// aapt resource value: 0x7f040038
+			public const int CANCEL_button = 2130968632;
+			
 			// aapt resource value: 0x7f040024
 			public const int DATE_text = 2130968612;
 			
@@ -249,17 +252,23 @@ namespace Mercury.Droid
 			// aapt resource value: 0x7f040010
 			public const int Key_Image = 2130968592;
 			
+			// aapt resource value: 0x7f040035
+			public const int LIST_listView = 2130968629;
+			
 			// aapt resource value: 0x7f040028
 			public const int LOCATION_text = 2130968616;
 			
-			// aapt resource value: 0x7f040033
-			public const int Location_LIST = 2130968627;
+			// aapt resource value: 0x7f040039
+			public const int Location_LIST = 2130968633;
 			
 			// aapt resource value: 0x7f040027
 			public const int Location_Layout = 2130968615;
 			
 			// aapt resource value: 0x7f040003
 			public const int MERCURY = 2130968579;
+			
+			// aapt resource value: 0x7f040033
+			public const int Mercury_Layout = 2130968627;
 			
 			// aapt resource value: 0x7f04000c
 			public const int MsgCounter_Text = 2130968588;
@@ -281,6 +290,12 @@ namespace Mercury.Droid
 			
 			// aapt resource value: 0x7f04002e
 			public const int ReqButtonSeparator_Layout = 2130968622;
+			
+			// aapt resource value: 0x7f040034
+			public const int SEARCH_textEdit = 2130968628;
+			
+			// aapt resource value: 0x7f040037
+			public const int SENDREQUEST_button = 2130968631;
 			
 			// aapt resource value: 0x7f04002a
 			public const int STATUS_text = 2130968618;
@@ -317,6 +332,9 @@ namespace Mercury.Droid
 			
 			// aapt resource value: 0x7f04001e
 			public const int UserID_Layout = 2130968606;
+			
+			// aapt resource value: 0x7f040036
+			public const int divider_layout = 2130968630;
 			
 			// aapt resource value: 0x7f04000d
 			public const int imageView1 = 2130968589;
@@ -371,16 +389,22 @@ namespace Mercury.Droid
 			public const int L_03_00_HomeView = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int L_03_03_LocationsView = 2130903043;
+			public const int L_03_01_MakeRequestView = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int LIST_Locations = 2130903044;
+			public const int L_03_03_LocationsView = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int LIST_UserProfiles = 2130903045;
+			public const int LIST_Locations = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int SplashScreen = 2130903046;
+			public const int LIST_RequestUsers = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int LIST_UserProfiles = 2130903047;
+			
+			// aapt resource value: 0x7f030008
+			public const int SplashScreen = 2130903048;
 			
 			static Layout()
 			{

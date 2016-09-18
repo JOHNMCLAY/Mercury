@@ -21,12 +21,6 @@ namespace Mercury.Core
         //-Prime User
         public static string primeUser = "";
 
-        //-Other Users
-        public static List<Users> Users = new List<Models.Users>();
-        public static void InitPopulateUsers()
-        {
-
-        }
 
         //-------------------------------------------------------------
         //--FUNCTIONS--------------------------------------------------
@@ -86,6 +80,32 @@ namespace Mercury.Core
 
 
         }
+
+        public static List<Users> Users = new List<Users>();
+        public static void PopulateUsers()
+        {
+            Users.Add(new Users("Manda Servin", "577"));
+            Users.Add(new Users("Eldridge Mesa", "502"));
+            Users.Add(new Users("Laurinda Brumsey", "265"));
+            Users.Add(new Users("Adriane Prosper", "550"));
+            Users.Add(new Users("Crissy Sevilla", "679"));
+            Users.Add(new Users("Aron Augsburger", "115"));
+            Users.Add(new Users("Liberty Holzer", "710"));
+            Users.Add(new Users("Christi Quillen", "857"));
+            Users.Add(new Users("Kam Disher", "360"));
+            Users.Add(new Users("Delmer Kampa", "412"));
+            Users.Add(new Users("Elijah Permenter", "677"));
+            Users.Add(new Users("Darius Hanus", "491"));
+            Users.Add(new Users("Venus Brockway", "720"));
+            Users.Add(new Users("Ariane Bissonnette", "401"));
+            Users.Add(new Users("Sherrill Kulikowski", "371"));
+            Users.Add(new Users("Modesto Mera", "856"));
+            Users.Add(new Users("Cicely Pooler", "255"));
+            Users.Add(new Users("Margarita Maness", "732"));
+            Users.Add(new Users("Ivan Webre", "736"));
+            Users.Add(new Users("Maybelle Kammer", "984"));
+        }
+
     }
 
 

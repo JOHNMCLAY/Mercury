@@ -11,9 +11,6 @@ namespace Mercury.Core.ViewModels
     public class A_03_03_LocationsViewModel : MvxViewModel
     {
 
-
-
-
         public A_03_03_LocationsViewModel()
         {
             //-Setup List

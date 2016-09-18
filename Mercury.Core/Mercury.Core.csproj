@@ -41,6 +41,7 @@
     <Compile Include="ViewModels\A_01_ProfileViewModel.cs" />
     <Compile Include="ViewModels\A_02_LogInViewModel.cs" />
     <Compile Include="ViewModels\A_03_00_HomeViewModel.cs" />
+    <Compile Include="ViewModels\A_03_01_MakeRequestViewModel.cs" />
     <Compile Include="ViewModels\A_03_03_LocationsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

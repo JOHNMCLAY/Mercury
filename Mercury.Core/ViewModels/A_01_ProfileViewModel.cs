@@ -50,6 +50,7 @@ namespace Mercury.Core.ViewModels
 
             //-Setup Database
             Database.PopulateLocations();
+            Database.PopulateUsers();
         }
 
 

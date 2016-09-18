@@ -91,6 +91,7 @@
     <Compile Include="Views\A_01_ProfileView.cs" />
     <Compile Include="Views\A_02_LogInView.cs" />
     <Compile Include="Views\A_03_00_HomeView.cs" />
+    <Compile Include="Views\A_03_01_MakeRequestView.cs" />
     <Compile Include="Views\A_03_03_LocationsView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +118,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\LIST_Locations.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\L_03_01_MakeRequestView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\LIST_RequestUsers.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

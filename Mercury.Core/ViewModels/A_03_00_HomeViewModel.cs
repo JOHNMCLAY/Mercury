@@ -19,11 +19,15 @@ namespace Mercury.Core.ViewModels
 
             LocationClick = new MvxCommand(() => ShowViewModel<A_03_03_LocationsViewModel>() );
             StatusClick = new MvxCommand(() => StatusChange() );
+
+            MakeRequest = new MvxCommand(() => ShowViewModel<A_03_01_MakeRequestViewModel>());
         }
 
         //-NAVIGATION ------------------------------
         public ICommand LocationClick { get; private set; }
         public ICommand StatusClick { get; private set; }
+
+        public ICommand MakeRequest { get; private set; }
 
         //-INFO ------------------------------------
         // Name
