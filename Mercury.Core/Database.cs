@@ -51,6 +51,14 @@ namespace Mercury.Core
             }
         }
 
+        public static void AddIncomingRequest(string username, IncomingRequests ir)
+        {
+            for (int i = 0; i < Users.Count; i++)
+            {
+                if (username == Users[i].Username) { Users[i].IncomingRequests.Add(ir); }
+            }
+        }
+
         //-------------------------------------------------------------
         //--DATA-------------------------------------------------------
         public static List<Locations> _locations = new List<Locations>();

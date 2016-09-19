@@ -16,6 +16,9 @@ namespace Mercury.Core.ViewModels
             Fullname = Database.Retrieve(Database.primeUser, "Name");
             Status = Database.Retrieve(Database.primeUser, "Status");
             Location = Database.Retrieve(Database.primeUser, "Location");
+            Date = DateTime.Now.Date.ToString("dd/MM/yyy");
+            Time = DateTime.Now.ToString("h:mm tt");
+            
 
             LocationClick = new MvxCommand(() => ShowViewModel<A_03_03_LocationsViewModel>() );
             StatusClick = new MvxCommand(() => StatusChange() );

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +16,8 @@ namespace Mercury.Core.Models
         public string Status { get; set; }
         public string Location { get; set; }
         public string Message { get; set; }
-        public List<string> SentRequests { get; set; }
-        public List<string> IncomingRequests { get; set; }
+        public List<string> OutgoingRequests { get; set; }
+        public List<IncomingRequests> IncomingRequests { get; set; }
 
         //-Constructors
         //[For Profiles]
@@ -67,6 +68,7 @@ namespace Mercury.Core.Models
                 if (r.Next(1, 4) == 3) { Message = "N/A"; }
             }
 
+            IncomingRequests = new List<IncomingRequests>();
         }
     }
 
@@ -78,5 +80,27 @@ namespace Mercury.Core.Models
         {
             LocationName = _name;
         }
+    }
+
+    public class IncomingRequests
+    {
+        public string Sender { get; set; }
+        public string Receiver { get; set; }
+        public string Date { get; set; }
+        public string Time { get; set; }
+
+        public IncomingRequests(string _sender, string _receiver, string _date, string _time)
+        {
+            Sender = _sender;
+            Receiver = _receiver;
+            Date = _date;
+            Time = _time;
+        }
+
+    }
+
+    public class OutgoingRequests
+    {
+
     }
 }

@@ -43,8 +43,8 @@
             android:id="@+id/USERNAME_Text"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:textColor="@android:color/darker_gray" 
-            local:MvxBind="Text Fullname"/>
+            android:textColor="@android:color/darker_gray"
+            local:MvxBind="Text Fullname" />
     </RelativeLayout>
     <RelativeLayout
         android:minWidth="25px"
@@ -69,13 +69,14 @@
             android:layout_marginLeft="10dp">
             <TextView
                 android:text="September 21st"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/DATE_text"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="@android:color/darker_gray"
+                local:MvxBind="Text Date" />
         </RelativeLayout>
         <RelativeLayout
             android:minWidth="25px"
@@ -89,13 +90,14 @@
             android:background="@drawable/im_03_underline">
             <TextView
                 android:text="10:00 AM"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/TIME_text"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="@android:color/darker_gray"
+                local:MvxBind="Text Time" />
         </RelativeLayout>
         <RelativeLayout
             android:minWidth="25px"
@@ -115,8 +117,8 @@
                 android:id="@+id/LOCATION_text"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:textColor="@android:color/darker_gray"         
-                local:MvxBind="Text Location; Click LocationClick"/>
+                android:textColor="@android:color/darker_gray"
+                local:MvxBind="Text Location; Click LocationClick" />
         </RelativeLayout>
         <RelativeLayout
             android:minWidth="250dp"
@@ -137,7 +139,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:textColor="@android:color/darker_gray"
-                local:MvxBind="Text Status; Click StatusClick"/>
+                local:MvxBind="Text Status; Click StatusClick" />
         </RelativeLayout>
         <RelativeLayout
             android:minWidth="105dp"
@@ -204,8 +206,8 @@
                 android:layout_width="200dp"
                 android:layout_height="45dp"
                 android:id="@+id/REQUEST_button"
-                android:textColor="@android:color/darker_gray" 
-                local:MvxBind="Click MakeRequest"/>
+                android:textColor="@android:color/darker_gray"
+                local:MvxBind="Click MakeRequest" />
         </RelativeLayout>
     </RelativeLayout>
 </LinearLayout>
