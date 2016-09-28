@@ -43,6 +43,9 @@
     <Compile Include="ViewModels\A_03_00_HomeViewModel.cs" />
     <Compile Include="ViewModels\A_03_01_MakeRequestViewModel.cs" />
     <Compile Include="ViewModels\A_03_03_LocationsViewModel.cs" />
+    <Compile Include="ViewModels\A_04_00_RequestHomeViewModel.cs" />
+    <Compile Include="ViewModels\A_04_01_ReceivedRequestViewModel.cs" />
+    <Compile Include="ViewModels\A_04_02_AnswerRequestViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Android">

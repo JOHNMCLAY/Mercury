@@ -23,7 +23,10 @@ namespace Mercury.Core.ViewModels
             LocationClick = new MvxCommand(() => ShowViewModel<A_03_03_LocationsViewModel>() );
             StatusClick = new MvxCommand(() => StatusChange() );
 
-            MakeRequest = new MvxCommand(() => ShowViewModel<A_03_01_MakeRequestViewModel>());
+            MakeRequest = new MvxCommand(() => ShowViewModel<A_03_01_MakeRequestViewModel>(new { _previousWindow = "HOME" }));
+            IncomingCommand = new MvxCommand(() => ShowViewModel<A_04_00_RequestHomeViewModel>());
+
+            LogOutCommand = new MvxCommand(() => ShowViewModel<A_01_ProfileViewModel>());
         }
 
         //-NAVIGATION ------------------------------
@@ -31,6 +34,9 @@ namespace Mercury.Core.ViewModels
         public ICommand StatusClick { get; private set; }
 
         public ICommand MakeRequest { get; private set; }
+        public ICommand IncomingCommand { get; private set; }
+
+        public ICommand LogOutCommand { get; private set; }
 
         //-INFO ------------------------------------
         // Name

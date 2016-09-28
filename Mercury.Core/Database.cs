@@ -18,6 +18,8 @@ namespace Mercury.Core
             profiles.Add("Jane.User");
   
         }
+        //-Populate Check
+        public static bool populated = false;
         //-Prime User
         public static string primeUser = "";
 
@@ -51,13 +53,75 @@ namespace Mercury.Core
             }
         }
 
-        public static void AddIncomingRequest(string username, IncomingRequests ir)
+        public static void MakeRequest(string username, Requests ir)
         {
             for (int i = 0; i < Users.Count; i++)
             {
-                if (username == Users[i].Username) { Users[i].IncomingRequests.Add(ir); }
+                if (username == Users[i].Username)  { Users[i].Requests.Add(ir); }
+                if (ir.Sender == Users[i].Username) { Users[i].Requests.Add(ir); }
             }
         }
+        public static void UpdateRequest(string userSender, string userRecipient, string _id, string status, string location, string message)
+        {
+            for (int i = 0; i < Users.Count; i++)
+            {
+            if(Users[i].Username == userSender)
+                {
+                for(int j=0; j < Users[i].Requests.Count; j++)
+                    {
+                    if(Users[i].Requests[j].UniqueID == _id)
+                        {
+                            //-Update
+                            Users[i].Requests[j].RequestState = 2;
+                            Users[i].Requests[j].Ans_Status = status;
+                            Users[i].Requests[j].Ans_Location = location;
+                            Users[i].Requests[j].Ans_Message = message;
+                            Users[i].Requests[j].Ans_Date = DateTime.Now.Date.ToString("dd/MM/yyy");
+                            Users[i].Requests[j].Ans_Time = DateTime.Now.ToString("h:mm tt");
+                            Users[i].Requests[j].ReceiverDetails = Users[i].Requests[j].ReceiverDetails + " - !";
+                        }
+                    }
+                }
+
+                if (Users[i].Username == userRecipient)
+                {
+                    for (int j = 0; j < Users[i].Requests.Count; j++)
+                    {
+                        if (Users[i].Requests[j].UniqueID == _id)
+                        {
+                            //-Update [Remove from Recipient's List]
+                            Users[i].Requests.RemoveAt(j);
+
+                        }
+                    }
+                }
+            }
+
+        }
+
+        public static int GetReq_UserIndex=0;
+        public static int GetReq_ReqIndex = 0;
+
+        public static void GetRequest(string user, string uniqueID)
+        {
+            for (int i = 0; i < Users.Count; i++)
+            {
+                if (Users[i].Username == user)
+                {
+                    GetReq_UserIndex = i;//-
+
+                    for (int j = 0; j < Users[i].Requests.Count; j++)
+                    {
+                        if (Users[i].Requests[j].UniqueID == uniqueID)
+                        {
+                            //-Update
+                            GetReq_ReqIndex = j;//-
+                        }
+                    }
+                }
+            }
+
+            }
 
         //-------------------------------------------------------------
         //--DATA-------------------------------------------------------

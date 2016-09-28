@@ -16,8 +16,8 @@ namespace Mercury.Core.Models
         public string Status { get; set; }
         public string Location { get; set; }
         public string Message { get; set; }
-        public List<string> OutgoingRequests { get; set; }
-        public List<IncomingRequests> IncomingRequests { get; set; }
+        //public List<string> OutgoingRequests { get; set; }
+        public List<Requests> Requests { get; set; }
 
         //-Constructors
         //[For Profiles]
@@ -40,6 +40,8 @@ namespace Mercury.Core.Models
                 Location = "Meeting Room B";
                 Message = "short meeting";
             }
+
+            Requests = new List<Requests>();
         }
         //[For Other Users]
         public Users(string _fullName, string _pin)
@@ -68,7 +70,7 @@ namespace Mercury.Core.Models
                 if (r.Next(1, 4) == 3) { Message = "N/A"; }
             }
 
-            IncomingRequests = new List<IncomingRequests>();
+            Requests = new List<Requests>();
         }
     }
 
@@ -82,25 +84,44 @@ namespace Mercury.Core.Models
         }
     }
 
-    public class IncomingRequests
+    public class Requests
     {
+        public int RequestState { get; set; }
+        public string UniqueID { get; set; }
+        //
         public string Sender { get; set; }
+        public string SenderDetails { get; set; }
         public string Receiver { get; set; }
-        public string Date { get; set; }
-        public string Time { get; set; }
+        public string ReceiverDetails { get; set; }
+        public string AskDate { get; set; }
+        public string AskTime { get; set; }
+        //
+        public string Ans_Status { get; set; }
+        public string Ans_Location { get; set; }
+        public string Ans_Message { get; set; }
+        public string Ans_Date { get; set; }
+        public string Ans_Time { get; set; }
 
-        public IncomingRequests(string _sender, string _receiver, string _date, string _time)
+        //-Constructor
+        public Requests(string _sender, string _receiver, string _date, string _time, string _id)
         {
+            RequestState = 1; // 1 = Sent | 2 = Answered
+            UniqueID = _id;
+
             Sender = _sender;
+            SenderDetails = _sender.Replace(".", " ") + " | " + _time + " - " + _date;
             Receiver = _receiver;
-            Date = _date;
-            Time = _time;
+            ReceiverDetails = _receiver.Replace(".", " ") + " | " + _time + " - " + _date; 
+            AskDate = _date;
+            AskTime = _time;
+
+            Ans_Status = "N/A";
+            Ans_Location = "N/A";
+            Ans_Message = "N/A";
+            Ans_Date = "N/A";
+            Ans_Time = "N/A";
         }
-
+        
     }
 
-    public class OutgoingRequests
-    {
-
-    }
 }

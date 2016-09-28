@@ -40,8 +40,6 @@ namespace Mercury.Core.ViewModels
 
             ButtonBack = new MvxCommand(() => EnterPIN("<") );
 
-            //-Check PIN
-            //if(PIN.Length==3) { Fullname = "YESSS"; }
         }
 
 
@@ -68,7 +66,7 @@ namespace Mercury.Core.ViewModels
         private void EnterPIN(string input)
         {
             if(input != "<") { PIN += input; }
-            if(input == "<") { PIN = PIN.Remove(PIN.Length - 1); }
+            if(input == "<" && PIN!="") { PIN = PIN.Remove(PIN.Length - 1); }
             //
             if (PIN.Length == 3)
             {

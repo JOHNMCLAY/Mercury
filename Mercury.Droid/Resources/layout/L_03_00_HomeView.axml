@@ -9,8 +9,7 @@
         android:minHeight="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/TitleLayout"
-        android:background="@android:color/background_light">
+        android:id="@+id/TitleLayout">
         <ImageView
             android:src="@drawable/mercury_title"
             android:layout_width="wrap_content"
@@ -24,8 +23,7 @@
         android:minHeight="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/UserID_Layout"
-        android:background="@android:color/background_light">
+        android:id="@+id/UserID_Layout">
         <ImageView
             android:src="@drawable/profile_01"
             android:layout_width="50dp"
@@ -51,25 +49,30 @@
         android:minHeight="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Seperator_Layout"
-        android:background="@drawable/im_03_userdetails" />
+        android:id="@+id/Seperator_Layout">
+        <TextView
+            android:text="USER DETAILS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/holo_red_light" />
+    </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/UserDetails_Layout"
-        android:minHeight="150dp"
-        android:background="@android:color/background_light">
+        android:minHeight="150dp">
         <RelativeLayout
             android:minWidth="250dp"
             android:minHeight="40dp"
             android:layout_width="245.0dp"
             android:layout_height="wrap_content"
             android:id="@+id/DateBG_Layout"
-            android:background="@drawable/im_03_underline"
             android:layout_marginLeft="10dp">
             <TextView
                 android:text="September 21st"
-                android:textSize="20dp"
+                android:textSize="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/DATE_text"
@@ -86,11 +89,10 @@
             android:layout_toRightOf="@id/DateBG_Layout"
             android:id="@+id/TimeBG_Layout"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/im_03_underline">
+            android:layout_marginRight="10dp">
             <TextView
                 android:text="10:00 AM"
-                android:textSize="20dp"
+                android:textSize="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/TIME_text"
@@ -108,8 +110,7 @@
             android:id="@+id/Location_Layout"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/im_03_underline">
+            android:layout_marginRight="10dp">
             <TextView
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="wrap_content"
@@ -127,7 +128,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/Location_Layout"
             android:id="@+id/Status_Layout"
-            android:background="@drawable/im_03_underline"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp">
             <TextView
@@ -152,11 +152,12 @@
             android:layout_marginLeft="270dp"
             android:background="@android:color/darker_gray">
             <Button
-                android:text="Button"
+                android:text="Log Out"
                 android:layout_width="105dp"
                 android:layout_height="40dp"
                 android:id="@+id/BUTTON_button"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="@android:color/darker_gray"
+                local:MvxBind="Click LogOutCommand" />
         </RelativeLayout>
     </RelativeLayout>
     <RelativeLayout
@@ -164,8 +165,7 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/Buttons_Layout"
-        android:background="@android:color/background_light">
+        android:id="@+id/Buttons_Layout">
         <RelativeLayout
             android:minWidth="25px"
             android:minHeight="25px"
@@ -185,11 +185,12 @@
             android:layout_marginBottom="10dp"
             android:background="@android:color/darker_gray">
             <Button
-                android:text="INCOMING | 2"
+                android:text="INCOMING"
                 android:layout_width="200dp"
                 android:layout_height="45dp"
                 android:id="@+id/INCOMING_button"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="@android:color/darker_gray"
+                local:MvxBind="Click IncomingCommand" />
         </RelativeLayout>
         <RelativeLayout
             android:minWidth="200dp"

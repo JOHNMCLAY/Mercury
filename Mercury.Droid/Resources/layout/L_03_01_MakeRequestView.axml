@@ -3,8 +3,7 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/background_light">
+    android:layout_height="match_parent">
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="75dp"
@@ -23,21 +22,6 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/relativeLayout1">
-        <EditText
-            android:inputType="textNoSuggestions"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/SEARCH_textEdit"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:textColor="@android:color/darker_gray" />
-    </RelativeLayout>
-    <RelativeLayout
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="match_parent"
         android:layout_height="350.0dp"
         android:id="@+id/relativeLayout2">
         <Mvx.MvxListView
@@ -46,8 +30,8 @@
             android:layout_width="350dp"
             android:layout_height="match_parent"
             android:id="@+id/LIST_listView"
-            android:background="@android:color/darker_gray"
-            android:layout_marginLeft="17.5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
             local:MvxItemTemplate="@layout/list_requestusers"
             local:MvxBind="ItemsSource UserProfiles; ItemClick SelectUserCommand" />
     </RelativeLayout>
@@ -59,28 +43,27 @@
         android:id="@+id/relativeLayout3" />
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="match_parent"
         android:id="@+id/relativeLayout4">
-        <RelativeLayout
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="5dp"
-            android:layout_height="match_parent"
-            android:id="@+id/divider_layout"
-            android:layout_centerHorizontal="true" />
         <Button
-            android:text="SEND"
+            android:text="BACK"
             android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:layout_toRightOf="@id/divider_layout"
-            android:id="@+id/SENDREQUEST_button"
-            android:textColor="@android:color/darker_gray" />
-        <Button
-            android:text="Cancel"
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:layout_toLeftOf="@id/divider_layout"
+            android:layout_height="40dp"
             android:id="@+id/CANCEL_button"
-            android:textColor="@android:color/darker_gray" />
+            android:textColor="@android:color/darker_gray"
+            android:layout_centerHorizontal="true"
+            local:MvxBind="Click BackCommand"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:text="#"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/CANCEL_button"
+            android:id="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="30dp"
+            local:MvxBind="Text RequestNotify" />
     </RelativeLayout>
 </LinearLayout>

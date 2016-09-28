@@ -37,12 +37,25 @@ namespace Mercury.Core.ViewModels
         public A_01_ProfileViewModel()
         {
             //-Setup User Profiles
-            Database.PopulateProfiles();
-            UserProfiles = new ObservableCollection<Users>() { };
-            for (int i = 0; i < Database.profiles.Count; i++)
+            if (Database.populated==false)
             {
-                UserProfiles.Add(new Users(Database.profiles[i]));
-                Database.Users.Add(UserProfiles[i]);
+                Database.PopulateProfiles();
+                UserProfiles = new ObservableCollection<Users>() { };
+                for (int i = 0; i < Database.profiles.Count; i++)
+                {
+                    UserProfiles.Add(new Users(Database.profiles[i]));
+                    Database.Users.Add(UserProfiles[i]);
+                }
+
+                Database.populated = true;
+            }
+            else
+            {
+                UserProfiles = new ObservableCollection<Users>() { };
+                for (int i = 0; i < Database.profiles.Count; i++)
+                {
+                    UserProfiles.Add(new Users(Database.profiles[i]));
+                }
             }
             
             //-Select User

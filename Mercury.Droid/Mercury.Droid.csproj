@@ -93,6 +93,9 @@
     <Compile Include="Views\A_03_00_HomeView.cs" />
     <Compile Include="Views\A_03_01_MakeRequestView.cs" />
     <Compile Include="Views\A_03_03_LocationsView.cs" />
+    <Compile Include="Views\A_04_00_RequestHomeView.cs" />
+    <Compile Include="Views\A_04_01_ReceivedRequestView.cs" />
+    <Compile Include="Views\A_04_02_AnswerRequestView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -124,6 +127,21 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\LIST_RequestUsers.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\L_04_00_RequestHomeView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\LIST_SentRequests.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\LIST_IncomingRequests.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\L_04_02_AnswerRequestView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\L_04_01_ReceivedRequestView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

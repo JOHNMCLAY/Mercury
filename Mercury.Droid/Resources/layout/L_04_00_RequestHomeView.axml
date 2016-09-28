@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/relativeLayout1">
+        <ImageView
+            android:src="@drawable/mercury_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MERCURY"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout2">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="225.0dp"
+            android:id="@+id/relativeLayout3">
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/relativeLayout5"
+                android:background="@android:color/darker_gray" />
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/relativeLayout5"
+                android:id="@+id/relativeLayout6">
+                <TextView
+                    android:text="SENT REQUESTS"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/holo_red_light" />
+            </RelativeLayout>
+            <Mvx.MvxListView
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="350dp"
+                android:layout_height="170dp"
+                android:layout_below="@id/relativeLayout6"
+                android:id="@+id/SENT_REQ_listview"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                local:MvxItemTemplate="@layout/list_sentrequests"
+                local:MvxBind="ItemsSource SentRequests; ItemClick SelectSentUserCommand" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:layout_below="@id/relativeLayout3"
+            android:id="@+id/relativeLayout4">
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/relativeLayout7">
+                <TextView
+                    android:text="INCOMING REQUESTS"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:layout_centerVertical="TRUE"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/holo_red_light" />
+            </RelativeLayout>
+            <Mvx.MvxListView
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="350dp"
+                android:layout_height="170dp"
+                android:layout_below="@id/relativeLayout7"
+                android:id="@+id/INCOMING_REQ_listview"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                local:MvxItemTemplate="@layout/list_incomingrequests"
+                local:MvxBind="ItemsSource IncomingRequests; ItemClick SelectIncomingCommand" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/relativeLayout4"
+            android:id="@+id/relativeLayout8">
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:id="@+id/relativeLayout9"
+                android:layout_centerHorizontal="true" />
+            <Button
+                android:text="NEW"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/relativeLayout9"
+                android:id="@+id/button1"
+                local:MvxBind="Click NewRequestCommand" />
+            <Button
+                android:text="BACK"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_toLeftOf="@id/relativeLayout9"
+                android:id="@+id/button2"
+                local:MvxBind="Click BackCommand" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
