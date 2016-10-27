@@ -3,7 +3,8 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/BG_Gradient">
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="25px"
@@ -31,8 +32,7 @@
                 android:minHeight="25px"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:id="@+id/relativeLayout5"
-                android:background="@android:color/darker_gray" />
+                android:id="@+id/relativeLayout5" />
             <RelativeLayout
                 android:minWidth="25px"
                 android:minHeight="25px"
@@ -49,7 +49,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="15dp"
                     android:textSize="20dp"
-                    android:textColor="@android:color/holo_red_light" />
+                    android:textColor="#CD5360"
+                    android:textStyle="bold" />
             </RelativeLayout>
             <Mvx.MvxListView
                 android:minWidth="25px"
@@ -86,7 +87,8 @@
                     android:layout_centerVertical="TRUE"
                     android:layout_marginLeft="15dp"
                     android:textSize="20dp"
-                    android:textColor="@android:color/holo_red_light" />
+                    android:textColor="#CD5360"
+                    android:textStyle="bold" />
             </RelativeLayout>
             <Mvx.MvxListView
                 android:minWidth="25px"
@@ -119,14 +121,18 @@
                 android:layout_height="50dp"
                 android:layout_toRightOf="@id/relativeLayout9"
                 android:id="@+id/button1"
-                local:MvxBind="Click NewRequestCommand" />
+                local:MvxBind="Click NewRequestCommand"
+                android:background="@drawable/AA_Buttons"
+                style="@style/button_text" />
             <Button
                 android:text="BACK"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
                 android:layout_toLeftOf="@id/relativeLayout9"
                 android:id="@+id/button2"
-                local:MvxBind="Click BackCommand" />
+                local:MvxBind="Click BackCommand"
+                android:background="@drawable/AA_Buttons"
+                style="@style/button_text" />
         </RelativeLayout>
     </RelativeLayout>
 </LinearLayout>

@@ -3,7 +3,8 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/BG_Gradient">
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="75dp"
@@ -50,10 +51,12 @@
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:id="@+id/CANCEL_button"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="#FFFFFF"
             android:layout_centerHorizontal="true"
             local:MvxBind="Click BackCommand"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:background="@drawable/AA_Buttons"
+            style="@style/button_text" />
         <TextView
             android:text="#"
             android:layout_width="wrap_content"
@@ -62,7 +65,7 @@
             android:id="@+id/textView1"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="15dp"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="#FFFFFF"
             android:textSize="30dp"
             local:MvxBind="Text RequestNotify" />
     </RelativeLayout>

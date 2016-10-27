@@ -26,16 +26,16 @@ namespace Mercury.Core.Models
             Username = userName;
             PIN = "123";
             //
-            if (Username == "John.User")
+            if (Username == "John.Smith")
             {
-                Fullname = "John User";
+                Fullname = "John Smith";
                 Status = "STATUS: Available";
                 Location = "Office Room A";
                 Message = "N/A";
             }
-            if (Username == "Jane.User")
+            if (Username == "Jane.Smith")
             {
-                Fullname = "Jane User";
+                Fullname = "Jane Smith";
                 Status = "STATUS: Available";
                 Location = "Meeting Room B";
                 Message = "short meeting";

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:background="@drawable/BG_Gradient">
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="25px"
@@ -52,7 +53,8 @@
             android:id="@+id/USERNAME_text"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             local:MvxBind="Text Sender" />
     </RelativeLayout>
     <RelativeLayout
@@ -67,7 +69,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView7"
             android:textSize="15dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="#CD5360" />
     </RelativeLayout>
     <RelativeLayout
         android:minWidth="25px"
@@ -82,7 +86,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView1"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp" />
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -103,6 +109,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView2"
                 android:layout_marginLeft="20dp"
+                android:textColor="#FFFFFF"
                 local:MvxBind="Text StatusText; Click StatusCommand" />
         </RelativeLayout>
         <Button
@@ -111,7 +118,9 @@
             android:layout_height="match_parent"
             android:layout_toRightOf="@id/relativeLayout19"
             android:id="@+id/button1"
-            local:MvxBind="Text StatusOkText; Click StatusOkCommand" />
+            local:MvxBind="Text StatusOkText; Click StatusOkCommand"
+            style="@style/button_text"
+            android:background="@drawable/AA_Buttons" />
     </RelativeLayout>
     <RelativeLayout
         android:minWidth="25px"
@@ -126,7 +135,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp" />
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -145,6 +156,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView4"
                 android:layout_marginLeft="20dp"
+                android:textColor="#FFFFFF"
                 local:MvxBind="Text LocationText; Click LocationCommand" />
         </RelativeLayout>
         <Button
@@ -153,7 +165,9 @@
             android:layout_height="match_parent"
             android:layout_toRightOf="@id/relativeLayout20"
             android:id="@+id/button2"
-            local:MvxBind="Text LocationOkText; Click LocationOkCommand" />
+            local:MvxBind="Text LocationOkText; Click LocationOkCommand"
+            style="@style/button_text"
+            android:background="@drawable/AA_Buttons" />
     </RelativeLayout>
     <RelativeLayout
         android:minWidth="25px"
@@ -168,7 +182,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView5"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp" />
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -176,14 +192,15 @@
         android:id="@+id/relativeLayout10"
         android:minWidth="25px"
         android:minHeight="25px">
-        <TextView
-            android:text="&quot;N/A&quot;"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView6"
+            android:id="@+id/editText1"
             android:layout_marginLeft="20dp"
-            local:MvxBind="Text Message" />
+            android:textColor="#FFFFFF"
+            android:text="N/A"
+            local:MvxBind="Text MessageText"
+            android:inputType="text" />
     </RelativeLayout>
     <RelativeLayout
         android:minWidth="25px"
@@ -210,13 +227,17 @@
             android:layout_height="50dp"
             android:layout_toRightOf="@id/relativeLayout21"
             android:id="@+id/button3"
-            local:MvxBind="Click SendCommand" />
+            local:MvxBind="Click SendCommand"
+            android:background="@drawable/AA_Buttons"
+            style="@style/button_text" />
         <Button
             android:text="Back"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_toLeftOf="@id/relativeLayout21"
             android:id="@+id/button4"
+            android:background="@drawable/AA_Buttons"
+            style="@style/button_text"
             local:MvxBind="Click BackCommand" />
     </RelativeLayout>
 </LinearLayout>

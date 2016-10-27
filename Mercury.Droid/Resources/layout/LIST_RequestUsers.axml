@@ -12,6 +12,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        local:MvxBind="Text Fullname"
-        android:textColor="@android:color/background_light" />
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        local:MvxBind="Text Fullname"/>
 </LinearLayout>

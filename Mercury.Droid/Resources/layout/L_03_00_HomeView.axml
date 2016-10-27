@@ -3,7 +3,8 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/BG_Gradient">
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="50dp"
@@ -27,7 +28,7 @@
         <ImageView
             android:src="@drawable/profile_01"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:id="@+id/ID_Image"
             android:layout_centerVertical="true"
             android:minHeight="50dp"
@@ -41,7 +42,8 @@
             android:id="@+id/USERNAME_Text"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             local:MvxBind="Text Fullname" />
     </RelativeLayout>
     <RelativeLayout
@@ -56,7 +58,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView1"
             android:layout_marginLeft="10dp"
-            android:textColor="@android:color/holo_red_light" />
+            android:textColor="#CD5360"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="20dp" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -78,7 +83,7 @@
                 android:id="@+id/DATE_text"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#FFFFFF"
                 local:MvxBind="Text Date" />
         </RelativeLayout>
         <RelativeLayout
@@ -98,7 +103,7 @@
                 android:id="@+id/TIME_text"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#FFFFFF"
                 local:MvxBind="Text Time" />
         </RelativeLayout>
         <RelativeLayout
@@ -118,7 +123,7 @@
                 android:id="@+id/LOCATION_text"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#FFFFFF"
                 local:MvxBind="Text Location; Click LocationClick" />
         </RelativeLayout>
         <RelativeLayout
@@ -138,7 +143,7 @@
                 android:id="@+id/STATUS_text"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#FFFFFF"
                 local:MvxBind="Text Status; Click StatusClick" />
         </RelativeLayout>
         <RelativeLayout
@@ -149,14 +154,14 @@
             android:layout_below="@id/Location_Layout"
             android:id="@+id/Button_Layout"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="270dp"
-            android:background="@android:color/darker_gray">
+            android:layout_marginLeft="270dp">
             <Button
                 android:text="Log Out"
                 android:layout_width="105dp"
                 android:layout_height="40dp"
                 android:id="@+id/BUTTON_button"
-                android:textColor="@android:color/darker_gray"
+                android:background="@drawable/AA_Buttons"
+                style="@style/button_text"
                 local:MvxBind="Click LogOutCommand" />
         </RelativeLayout>
     </RelativeLayout>
@@ -182,15 +187,16 @@
             android:layout_above="@id/ReqButtonSeparator_Layout"
             android:id="@+id/TopReqButton_Layout"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="10dp"
-            android:background="@android:color/darker_gray">
+            android:layout_marginBottom="10dp">
             <Button
                 android:text="INCOMING"
                 android:layout_width="200dp"
                 android:layout_height="45dp"
                 android:id="@+id/INCOMING_button"
-                android:textColor="@android:color/darker_gray"
-                local:MvxBind="Click IncomingCommand" />
+                local:MvxBind="Click IncomingCommand"
+                android:background="@drawable/AA_Buttons"
+                style="@style/button_text"
+                android:textColor="#FFFFFF" />
         </RelativeLayout>
         <RelativeLayout
             android:minWidth="200dp"
@@ -200,15 +206,16 @@
             android:layout_below="@id/ReqButtonSeparator_Layout"
             android:id="@+id/BottomReqButton_Layout"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/darker_gray">
+            android:layout_marginTop="10dp">
             <Button
                 android:text="REQUEST"
                 android:layout_width="200dp"
                 android:layout_height="45dp"
                 android:id="@+id/REQUEST_button"
-                android:textColor="@android:color/darker_gray"
-                local:MvxBind="Click MakeRequest" />
+                android:textColor="#FFFFFF"
+                local:MvxBind="Click MakeRequest"
+                android:background="@drawable/AA_Buttons"
+                style="@style/button_text" />
         </RelativeLayout>
     </RelativeLayout>
 </LinearLayout>

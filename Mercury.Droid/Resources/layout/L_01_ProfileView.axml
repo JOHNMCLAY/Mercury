@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:background="@drawable/BG_Gradient">
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="120dp"
         android:id="@+id/relativeLayout1">
         <ImageView
             android:src="@drawable/mercury_title"
@@ -50,7 +51,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView1"
             android:layout_centerHorizontal="true"
-            android:textColor="@android:color/holo_red_light" />
+            android:textColor="#CD5360"
+            android:textStyle="bold" />
     </RelativeLayout>
     <RelativeLayout
         android:minWidth="25px"

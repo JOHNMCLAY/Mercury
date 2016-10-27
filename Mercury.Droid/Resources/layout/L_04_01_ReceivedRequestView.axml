@@ -3,7 +3,8 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/BG_Gradient">
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="25px"
@@ -37,7 +38,7 @@
         <ImageView
             android:src="@drawable/profile_01"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:id="@+id/PROFILE_PIC_image"
             android:layout_centerVertical="true"
             android:layout_marginLeft="25dp" />
@@ -50,7 +51,8 @@
             android:id="@+id/USERNAME_text"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
-            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
             local:MvxBind="Text SenderText" />
     </RelativeLayout>
     <RelativeLayout
@@ -72,7 +74,8 @@
                 android:layout_marginTop="15dp"
                 android:layout_centerInParent="true"
                 android:paddingTop="5dp"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
         </RelativeLayout>
         <RelativeLayout
             android:minWidth="25px"
@@ -89,7 +92,7 @@
                 android:id="@+id/STATUS_received_text"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#FFFFFF"
                 local:MvxBind="Text AvailabilityText" />
         </RelativeLayout>
     </RelativeLayout>
@@ -110,7 +113,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/LOCATION_text"
                 android:layout_centerInParent="true"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
         </RelativeLayout>
         <RelativeLayout
             android:minWidth="25px"
@@ -127,7 +131,7 @@
                 android:id="@+id/LOCATION_received_text"
                 android:layout_marginLeft="15dp"
                 android:layout_centerVertical="true"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#FFFFFF"
                 local:MvxBind="Text LocationText" />
         </RelativeLayout>
     </RelativeLayout>
@@ -148,7 +152,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/MESSAGE_title_text"
                 android:layout_centerInParent="true"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
         </RelativeLayout>
         <RelativeLayout
             android:minWidth="25px"
@@ -165,7 +170,7 @@
                 android:id="@+id/MESSAGE_received_text"
                 android:layout_marginLeft="15dp"
                 android:layout_centerVertical="true"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#FFFFFF"
                 local:MvxBind="Text MessageText" />
         </RelativeLayout>
     </RelativeLayout>
@@ -182,7 +187,9 @@
             android:id="@+id/OK_button"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:textColor="@android:color/darker_gray" 
-            local:MvxBind="Click OkCommand"/>
+            android:textColor="#FFFFFF"
+            local:MvxBind="Click OkCommand"
+            android:background="@drawable/AA_Buttons"
+            style="@style/button_text" />
     </RelativeLayout>
 </LinearLayout>

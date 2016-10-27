@@ -6,10 +6,15 @@
     android:layout_height="match_parent">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
+        android:layout_height="match_parent"
+        android:textSize="20dp"
+        android:text="Place.Holder"
+        android:textColor="#FFFFFF"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp"
-        local:MvxBind="Text Username" />
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textAlignment="center" 
+        local:MvxBind="Text Username"/>
 </LinearLayout>

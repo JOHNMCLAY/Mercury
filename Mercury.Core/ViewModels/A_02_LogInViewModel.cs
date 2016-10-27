@@ -70,7 +70,12 @@ namespace Mercury.Core.ViewModels
             //
             if (PIN.Length == 3)
             {
-                if(PIN=="123") { ShowViewModel<A_03_00_HomeViewModel>(); }
+                //-Compares User Pin against their Saved Pin in the Database
+                //if (PIN == Database.Retrieve(Database.primeUser, "PIN")) { ShowViewModel<A_03_00_HomeViewModel>(); }
+                //else { PIN = ""; }
+
+                //-TESTING [All PINs work]
+                if (PIN!="000") { ShowViewModel<A_03_00_HomeViewModel>(); }
                 else { PIN = ""; }
             }
         }

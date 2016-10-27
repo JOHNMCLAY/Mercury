@@ -14,8 +14,8 @@ namespace Mercury.Core
         public static void PopulateProfiles()
         {
             
-            profiles.Add("John.User");
-            profiles.Add("Jane.User");
+            profiles.Add("John.Smith");
+            profiles.Add("Jane.Smith");
   
         }
         //-Populate Check
@@ -26,6 +26,8 @@ namespace Mercury.Core
 
         //-------------------------------------------------------------
         //--FUNCTIONS--------------------------------------------------
+
+        //-Retrieve User Info. - Name/Status/Location/Message/PIN
         public static string Retrieve (string username, string item)
         {
             for (int i = 0; i < Users.Count; i++)
@@ -36,9 +38,10 @@ namespace Mercury.Core
                     if (item == "Status") { return Users[i].Status; }
                     if (item == "Location") { return Users[i].Location; }
                     if (item == "Message") { return Users[i].Message; }
+                    if (item == "PIN") { return Users[i].PIN; }
                 }
             }
-            return "";
+            return ""; //-Also Catch Exception here 
         }
         public static void UpdateUser(string username, string parameter, string updateValue)
         {

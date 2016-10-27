@@ -4,7 +4,8 @@
     p1:orientation="vertical"
     p1:layout_width="match_parent"
     p1:layout_height="match_parent"
-    p1:id="@+id/linearLayout1">
+    p1:id="@+id/linearLayout1"
+    p1:background="@drawable/BG_Gradient">
     <RelativeLayout
         p1:minWidth="25px"
         p1:minHeight="25px"
@@ -28,9 +29,10 @@
         <ImageView
             p1:src="@drawable/profile_01"
             p1:layout_width="60dp"
-            p1:layout_height="60dp"
+            p1:layout_height="40dp"
             p1:id="@+id/ProfilePic_Image"
-            p1:layout_marginLeft="20dp" />
+            p1:layout_marginLeft="20dp"
+            p1:layout_centerVertical="true" />
         <TextView
             p1:text="User Name"
             p1:textAppearance="?android:attr/textAppearanceLarge"
@@ -39,26 +41,27 @@
             p1:layout_toRightOf="@id/ProfilePic_Image"
             p1:id="@+id/USER_Text"
             p1:layout_centerVertical="true"
-            p1:textColor="@android:color/darker_gray"
+            p1:textColor="#FFFFFF"
             p1:layout_marginLeft="10dp"
+            p1:textStyle="bold"
             local:MvxBind="Text Fullname" />
         <TextView
-            p1:text="2"
+            p1:text="123"
             p1:textAppearance="?android:attr/textAppearanceLarge"
             p1:layout_width="wrap_content"
             p1:layout_height="wrap_content"
             p1:id="@+id/MsgCounter_Text"
-            p1:textColor="@android:color/darker_gray"
+            p1:textColor="#FFFFFF"
             p1:layout_centerVertical="true"
-            p1:layout_marginLeft="290dp" />
+            p1:layout_marginLeft="270dp" />
         <ImageView
-            p1:src="@drawable/message"
+            p1:src="@drawable/IM_02_KeyRed"
             p1:layout_width="35dp"
             p1:layout_height="35dp"
             p1:layout_toRightOf="@id/MsgCounter_Text"
             p1:id="@+id/imageView1"
             p1:layout_centerVertical="true"
-            p1:layout_marginLeft="15dp" />
+            p1:layout_marginLeft="5dp" />
     </RelativeLayout>
     <RelativeLayout
         p1:minWidth="25px"
@@ -78,7 +81,7 @@
             p1:layout_width="55dp"
             p1:layout_height="50dp"
             p1:id="@+id/textView1"
-            p1:background="@android:color/darker_gray"
+            p1:background="#CD5360"
             p1:layout_centerHorizontal="true"
             p1:password="true"
             p1:textSize="30dp"
@@ -111,7 +114,9 @@
             p1:layout_centerHorizontal="true"
             p1:layout_centerVertical="true"
             p1:textSize="50dp"
-            local:MvxBind="Click Button5" />
+            local:MvxBind="Click Button5"
+            p1:background="@drawable/AA_Buttons"
+            p1:textStyle="bold" />
         <Button
             p1:text="2"
             p1:layout_width="80dp"
@@ -122,7 +127,9 @@
             p1:layout_above="@id/BUTTON_5"
             p1:id="@+id/BUTTON_2"
             p1:layout_marginBottom="10dp"
-            local:MvxBind="Click Button2" />
+            local:MvxBind="Click Button2"
+            p1:background="@drawable/AA_Buttons"
+            p1:textStyle="bold" />
         <Button
             p1:text="8"
             p1:layout_width="80dp"
@@ -133,7 +140,9 @@
             p1:layout_below="@id/BUTTON_5"
             p1:id="@+id/BUTTON_8"
             p1:layout_marginTop="10dp"
-            local:MvxBind="Click Button8" />
+            local:MvxBind="Click Button8"
+            p1:background="@drawable/AA_Buttons"
+            p1:textStyle="bold" />
         <Button
             p1:text="6"
             p1:layout_width="80dp"
@@ -144,7 +153,9 @@
             p1:layout_toRightOf="@id/BUTTON_5"
             p1:id="@+id/BUTTON_6"
             p1:layout_marginLeft="10dp"
-            local:MvxBind="Click Button6" />
+            local:MvxBind="Click Button6"
+            p1:background="@drawable/AA_Buttons"
+            p1:textStyle="bold" />
         <Button
             p1:text="4"
             p1:layout_width="80dp"
@@ -155,7 +166,9 @@
             p1:textSize="50dp"
             p1:layout_toLeftOf="@id/BUTTON_5"
             p1:layout_marginRight="10dp"
-            local:MvxBind="Click Button4" />
+            local:MvxBind="Click Button4"
+            p1:background="@drawable/AA_Buttons"
+            p1:textStyle="bold" />
         <Button
             p1:text="3"
             p1:layout_width="80dp"
@@ -165,7 +178,9 @@
             p1:layout_marginLeft="10dp"
             p1:layout_marginTop="7dp"
             p1:textSize="50dp"
-            local:MvxBind="Click Button3" />
+            local:MvxBind="Click Button3"
+            p1:background="@drawable/AA_Buttons"
+            p1:textStyle="bold" />
         <Button
             p1:text="1"
             p1:layout_width="80dp"
@@ -175,7 +190,9 @@
             p1:layout_marginTop="7dp"
             p1:layout_marginRight="10dp"
             p1:textSize="50dp"
-            local:MvxBind="Click Button1" />
+            local:MvxBind="Click Button1"
+            p1:background="@drawable/AA_Buttons"
+            p1:textStyle="bold" />
         <Button
             p1:text="9"
             p1:layout_width="80dp"
@@ -185,7 +202,9 @@
             p1:layout_marginLeft="10dp"
             p1:layout_marginTop="187dp"
             p1:textSize="50dp"
-            local:MvxBind="Click Button9" />
+            local:MvxBind="Click Button9"
+            p1:background="@drawable/AA_Buttons"
+            p1:textStyle="bold" />
         <Button
             p1:text="7"
             p1:layout_width="80dp"
@@ -195,7 +214,9 @@
             p1:layout_marginTop="188dp"
             p1:layout_marginRight="10dp"
             p1:textSize="50dp"
-            local:MvxBind="Click Button7" />
+            local:MvxBind="Click Button7"
+            p1:background="@drawable/AA_Buttons"
+            p1:textStyle="bold" />
     </RelativeLayout>
     <RelativeLayout
         p1:minWidth="25px"
@@ -210,6 +231,8 @@
             p1:id="@+id/BUTTON_back"
             p1:layout_centerHorizontal="true"
             p1:textSize="50dp"
-            local:MvxBind="Click ButtonBack" />
+            local:MvxBind="Click ButtonBack"
+            p1:background="@drawable/AA_Buttons"
+            p1:textStyle="bold" />
     </RelativeLayout>
 </LinearLayout>
