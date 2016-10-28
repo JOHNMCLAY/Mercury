@@ -32,7 +32,11 @@ namespace Mercury.Core.ViewModels
             UserProfiles = new ObservableCollection<Users>() {};
             for (int i = 0; i < Database.Users.Count; i++)
             {
-                UserProfiles.Add(Database.Users[i]);
+                //-Prevent current User showing up in this list
+                if (Database.Users[i].Username!=Database.primeUser)
+                {
+                    UserProfiles.Add(Database.Users[i]);
+                }
             }
 
             RequestNotify = "Tap to Send Request...";
@@ -93,6 +97,7 @@ namespace Mercury.Core.ViewModels
             RequestNotify = "Request Sent!";
             var result = ResultNotify();
             //**
+            
         }
 
         public void GoBack ()
