@@ -26,7 +26,7 @@ namespace Mercury.Core.ViewModels
             MakeRequest = new MvxCommand(() => ShowViewModel<A_03_01_MakeRequestViewModel>(new { _previousWindow = "HOME" }));
             IncomingCommand = new MvxCommand(() => ShowViewModel<A_04_00_RequestHomeViewModel>());
 
-            LogOutCommand = new MvxCommand(() => ShowViewModel<A_01_ProfileViewModel>());
+            LogOutCommand = new MvxCommand(() => ShowViewModel<A_01_00_ProfileViewModel>());
         }
 
         //-NAVIGATION ------------------------------

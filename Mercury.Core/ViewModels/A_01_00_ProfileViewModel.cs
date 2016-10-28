@@ -13,7 +13,7 @@ using System.Diagnostics;
 namespace Mercury.Core.ViewModels
 {
 
-    public class A_01_ProfileViewModel : MvxViewModel
+    public class A_01_00_ProfileViewModel : MvxViewModel
     {
         //-User Profiles
         //Database db;// = new Database();
@@ -33,11 +33,12 @@ namespace Mercury.Core.ViewModels
 
         //-----------------------------------------------------
         public ICommand SelectItemCommand { get; private set; }
+        public ICommand RegistrationCommand { get; private set; }
 
-        public A_01_ProfileViewModel()
+        public A_01_00_ProfileViewModel()
         {
             //-Setup User Profiles
-            if (Database.populated==false)
+            if (Database.populated == false)
             {
                 Database.PopulateProfiles();
                 UserProfiles = new ObservableCollection<Users>() { };
@@ -48,22 +49,29 @@ namespace Mercury.Core.ViewModels
                 }
 
                 Database.populated = true;
+
+                //-Setup Database
+                Database.PopulateLocations();
+                Database.PopulateUsers();
             }
             else
             {
                 UserProfiles = new ObservableCollection<Users>() { };
-                for (int i = 0; i < Database.profiles.Count; i++)
+                for (int i = 0; i < Database.Users.Count; i++)
                 {
-                    UserProfiles.Add(new Users(Database.profiles[i]));
+                    if (Database.Users[i].IsUser == 1)
+                    {
+                        UserProfiles.Add(Database.Users[i]);
+                    }
                 }
             }
-            
-            //-Select User
-            SelectItemCommand = new MvxCommand<Users>(item => ShowViewModel<A_02_LogInViewModel>( new { _fullname = item.Fullname, _username = item.Username } ));
 
-            //-Setup Database
-            Database.PopulateLocations();
-            Database.PopulateUsers();
+            //-Select User
+            SelectItemCommand = new MvxCommand<Users>(item => ShowViewModel<A_02_LogInViewModel>(new { _fullname = item.Fullname, _username = item.Username }));
+            //-Register a New User
+            RegistrationCommand = new MvxCommand(() => ShowViewModel<A_01_01_RegistrationViewModel>());
+
+
         }
 
 

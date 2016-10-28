@@ -25,7 +25,7 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         android:id="@+id/relativeLayout2">
         <Mvx.MvxListView
             android:minWidth="25px"
@@ -42,8 +42,24 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="40.0dp"
+        android:layout_height="60.0dp"
         android:id="@+id/relativeLayout3">
+        <Button
+            android:text="Register"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:layout_centerInParent="true"
+            style="@style/button_text"
+            android:background="@drawable/AA_Buttons"
+            local:MvxBind="Click RegistrationCommand"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout4">
         <TextView
             android:text="S E L E C T    P R O F I L E"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -52,12 +68,7 @@
             android:id="@+id/textView1"
             android:layout_centerHorizontal="true"
             android:textColor="#CD5360"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
     </RelativeLayout>
-    <RelativeLayout
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/relativeLayout4" />
 </LinearLayout>

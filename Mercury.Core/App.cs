@@ -11,7 +11,7 @@ namespace Mercury.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.A_01_ProfileViewModel>();
+            RegisterAppStart<ViewModels.A_01_00_ProfileViewModel>();
         }
     }
 }

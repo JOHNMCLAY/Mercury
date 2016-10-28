@@ -16,6 +16,7 @@ namespace Mercury.Core.Models
         public string Status { get; set; }
         public string Location { get; set; }
         public string Message { get; set; }
+        public int IsUser { get; set; }
         //public List<string> OutgoingRequests { get; set; }
         public List<Requests> Requests { get; set; }
 
@@ -41,6 +42,7 @@ namespace Mercury.Core.Models
                 Message = "short meeting";
             }
 
+            IsUser = 1;
             Requests = new List<Requests>();
         }
         //[For Other Users]
@@ -53,10 +55,10 @@ namespace Mercury.Core.Models
             Username = _fullName.Replace(" ", ".");
             Location = Database._locations[r.Next(0, Database._locations.Count)].LocationName;
 
-            if(r.Next(1,5)==1) { Status = "STATUS: Unavailable"; }
+            if (r.Next(1, 5) == 1) { Status = "STATUS: Unavailable"; }
             else { Status = "STATUS: Available"; }
 
-            if(Status == "STATUS: Unavailable")
+            if (Status == "STATUS: Unavailable")
             {
                 if (r.Next(1, 4) == 1) { Message = "Out to Lunch"; }
                 if (r.Next(1, 4) == 2) { Message = "BRB"; }
@@ -69,7 +71,20 @@ namespace Mercury.Core.Models
                 if (r.Next(1, 4) == 2) { Message = "Free until 5pm"; }
                 if (r.Next(1, 4) == 3) { Message = "N/A"; }
             }
+            IsUser = 0;
+            Requests = new List<Requests>();
+        }
+        //[For Created Profiles]
+        public Users(string _userName, string _pin, int _created)
+        {
+            Username = _userName;
+            PIN = _pin;
+            Fullname = _userName.Replace(".", " ");
+            Status = "STATUS: Available";
+            Location = "Office Room A";
+            Message = "N/A";
 
+            IsUser = 1;
             Requests = new List<Requests>();
         }
     }

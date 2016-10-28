@@ -6,16 +6,16 @@ using MvvmCross.Droid.Views;
 namespace Mercury.Droid.Views
 {
     [Activity(
-    Label = "A_01_ProfileViewModel"
+    Label = "A_01_00_ProfileViewModel"
     , Theme = "@style/Theme.App"
     , ScreenOrientation = ScreenOrientation.Portrait)]
     //
-    public class A_01_ProfileView : MvxActivity
+    public class A_01_00_ProfileView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.L_01_ProfileView);
+            SetContentView(Resource.Layout.L_01_00_ProfileView);
         }
     }
 }
