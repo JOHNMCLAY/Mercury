@@ -69,9 +69,10 @@ namespace Mercury.Core.ViewModels
             //-Select User
             SelectItemCommand = new MvxCommand<Users>(item => ShowViewModel<A_02_LogInViewModel>(new { _fullname = item.Fullname, _username = item.Username }));
             //-Register a New User
-            RegistrationCommand = new MvxCommand(() => ShowViewModel<A_01_01_RegistrationViewModel>());
+            //RegistrationCommand = new MvxCommand(() => ShowViewModel<A_01_01_RegistrationViewModel>());
 
-
+            //-DATABASE TESTING
+            RegistrationCommand = new MvxCommand(() => ShowViewModel<A_TEST_DB_ViewModel>());
         }
 
 

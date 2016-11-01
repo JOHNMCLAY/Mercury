@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TEXT_Name"
+        android:text="Name"
+        local:MvxBind="Text Username"/>
+    <Button
+        android:text="Submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Submit"
+        local:MvxBind="Click SubmitCommand"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="83.5dp"
+        android:id="@+id/linearLayout1" />
+    <Button
+        android:text="Recall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Recall" 
+        local:MvxBind="Click RecallCommand"/>
+    <TextView
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="79.5dp"
+        android:id="@+id/TEXT_Recall"
+        local:MvxBind="Text RecallInfo"/>
+</LinearLayout>

@@ -52,7 +52,7 @@
             android:layout_centerInParent="true"
             style="@style/button_text"
             android:background="@drawable/AA_Buttons"
-            local:MvxBind="Click RegistrationCommand"/>
+            local:MvxBind="Click RegistrationCommand" />
     </RelativeLayout>
     <RelativeLayout
         android:minWidth="25px"
