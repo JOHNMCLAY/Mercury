@@ -79,18 +79,6 @@
                     android:textSize="20dp"
                     android:textColor="#CD5360"
                     android:textStyle="bold" />
-                <TextView
-                    android:text="- [ Name.Name ]"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/textView2"
-                    android:id="@+id/textView3"
-                    android:textColor="#FFFFFF"
-                    android:layout_marginLeft="20dp"
-                    android:layout_centerVertical="true"
-                    local:MvxBind="Text TooltipUN"
-                    />
             </RelativeLayout>
             <EditText
                 android:layout_width="wrap_content"
@@ -99,7 +87,8 @@
                 android:id="@+id/editText1"
                 android:layout_marginLeft="20dp"
                 android:text="User.Name"
-                local:MvxBind="Text Username" />
+                local:MvxBind="Text Username"
+                />
             <TextView
                 android:text="PIN"
                 android:textAppearance="?android:attr/textAppearanceLarge"
@@ -119,7 +108,8 @@
                 android:layout_marginLeft="20dp"
                 android:numeric="integer"
                 android:text="###"
-                local:MvxBind="Text PIN" />
+                local:MvxBind="Text PIN"
+                />
             <ImageView
                 android:src="@drawable/Profile_01"
                 android:layout_width="wrap_content"
@@ -128,17 +118,6 @@
                 android:id="@+id/imageView1"
                 android:layout_marginLeft="145dp"
                 android:layout_marginTop="150dp" />
-            <TextView
-                android:text="- [ minimum 3 digits ]"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/textView2"
-                android:id="@+id/textView4"
-                android:layout_marginTop="105dp"
-                android:layout_marginLeft="50dp"
-                android:textColor="#FFFFFF"
-                local:MvxBind="Text TooltipPIN"/>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
