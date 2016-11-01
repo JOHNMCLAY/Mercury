@@ -54,7 +54,6 @@ namespace Mercury.Core.ViewModels
             Username = "User.Name";
             PIN = "123";
             //-Select User
-            //SelectItemCommand = new MvxCommand<Users>(item => ShowViewModel<A_02_LogInViewModel>( new { _fullname = item.Fullname, _username = item.Username } ));
 
 
             //-Button Functionality
